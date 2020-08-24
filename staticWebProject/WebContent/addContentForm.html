@@ -140,12 +140,14 @@
 
 <div id="footer">이부분은 푸터</div>
 <script type="text/javascript">
+/* 사진등록하기 버튼 누르면 hidden인 input버튼 같이 눌러짐 */
 $('#aTagFile').click(function(){
 	$('#filename').trigger('click');
 	return false;
 })
 
-$('.starRev a').click(function() {
+/* 별점 */
+$('.starRev a').click(function() { 
 	$(this).parent().children('a').removeClass('on');
 	$(this).parent().children('a').html('☆');
 	$(this).addClass('on').prevAll('a').addClass('on');
@@ -173,6 +175,7 @@ $('.starRev a').click(function() {
 	return false;
 });
 
+/* 카테고리 누르면 왼쪽에 선택한 카테고리 표시 */
 $('.category a').click(function() {
 	$('#cat-id').html($(this).html());
 	$('#cat').val($('#cat-id').html());

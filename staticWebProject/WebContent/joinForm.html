@@ -23,11 +23,17 @@
 <script src="js/jquery.waypoints.min.js"></script>
 <script src="js/main.js"></script>
 <style>
+
 </style>
+
 </head>
+
 <body>
+
 <div id="header">이부분은 헤더</div>
+
 <div class="col-md-4"></div>
+
 <div class="col-md-4">
 	<br> <br> <br> <br> <br>
 	<h3>회원가입</h3>
@@ -79,30 +85,29 @@
 		<br> <br>
 		<div class="col-md-4"></div>
 		<div class="form-group">
-			<input type="submit" value="회원가입" id="memberJoin" class="btn btn-primary">
+			<input type="button" value="회원가입" id="memberJoin" class="btn btn-primary">
+			<!-- <input type="submit" value="회원가입" id="memberJoin" class="btn btn-primary"> -->
 		</div>
 		<div class="col-md-5"></div>
 		<br> <br> <br> <br> <br>
 	</form>
 </div>
 
-
 <div class="col-md-4"></div>
-
-
 
 <div id="footer">이부분은 푸터</div>
 <script type="text/javascript">
 $("#memberJoin").on('click', function() {
-	location.href="index.html";
-/* 	var id = $("#id").val();
+	//location.href="index.html";
+ 	var id = $("#id").val();
 	if (id == "") {
 		alert("아이디를 입력하세요");
 		id.focus();
 		return false;
 	}else{
 		location.href="index.html";
-	} */
+	}
+	return false;
 });
 
 $("#btnOverappedId").on('click', function() {

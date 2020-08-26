@@ -28,9 +28,9 @@
 </style>
 
 </head>
+
 <body>
 <div id="header">이부분은 헤더</div>
-
 
 <div class="col-md-4"></div>
 
@@ -130,8 +130,8 @@
 		<hr><br> <br>
 		<div class="col-md-3"></div>
 		<div class="form-group">
-			<input type="submit" value="등록하기" id="memberJoin" class="btn btn-primary" onclick="javascript: form.action='addcontent.do';">
-			<input type="submit" value="미리보기" id="btn-view" class="btn btn-primary" onclick="javascript: form.action='preview.do';">
+			<input type="submit" value="등록하기" id="memberJoin" class="btn btn-primary" onclick="javascript: form.action='index.html';">
+			<input type="submit" value="미리보기" id="btn-view" class="btn btn-primary" onclick="javascript: form.action='viewForm.html';">
 		</div>
 		<br><br><br><br>
 	</form>
@@ -140,6 +140,18 @@
 
 <div id="footer">이부분은 푸터</div>
 <script type="text/javascript">
+$("#memberJoin").on('click', function() {
+	alert("등록되었습니다.");	
+	location.href="index.html";
+	return false;
+});
+
+$("#btn-view").on('click', function() {
+	alert("미리보기 페이지입니다.");	
+	location.href="viewForms.html";
+	return false;
+});
+
 /* 사진등록하기 버튼 누르면 hidden인 input버튼 같이 눌러짐 */
 $('#aTagFile').click(function(){
 	$('#filename').trigger('click');

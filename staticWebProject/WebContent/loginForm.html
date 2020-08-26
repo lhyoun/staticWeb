@@ -28,32 +28,25 @@
 </style>
 
 </head>
+
 <body>
 <div id="header">이부분은 헤더</div>
 
-
-
-
-
 <div class="col-md-4"></div>
 
-
 <div class="col-md-4" id="loginModal">
-	<br> <br> <br> <br> <br>
-
+	<br><br><br><br><br>
 	<h3>LOGIN</h3>
 	<form action="#">
 		<div class="row form-group">
 			<div class="col-md-12">
-				<label for="fname">ID</label> <input type="text" id="join_id"
+				<label for="fname">ID</label> <input type="text" id="id"
 					class="form-control">
 			</div>
-
 		</div>
-
 		<div class="row form-group">
 			<div class="col-md-12">
-				<label for="email">PW</label> <input type="text" id="join_pw"
+				<label for="email">PW</label> <input type="password" id="pw"
 					class="form-control">
 			</div>
 		</div>
@@ -66,16 +59,23 @@
 		<br> <br> <br> <br> <br>
 	</form>
 </div>
-
-
 <div class="col-md-4"></div>
-
-
-
-
 
 <div id="footer">이부분은 푸터</div>
 <script type="text/javascript">
+$("#btnLogin").on('click', function() {
+	//location.href="index.html";
+ 	var id = $("#id").val();
+	if (id == "") {
+		alert("아이디를 입력하세요");
+		id.focus();
+		return false;
+	}else{
+		location.href="index.html";
+		alert("로그인 성공");
+	}
+	return false;
+});
 
 $(document).ready( function() {
 	$("#header").load("header.html");
